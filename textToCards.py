@@ -1,7 +1,7 @@
 import os
 
 for filename in os.listdir('../'):
-    if filename.endswith(".md") and filename == '201805161546 Entropic Brain.md':
+    if filename.endswith(".md"):
         timestamp = filename[0:12]
         if timestamp.isdigit():
             title = filename[12:-3]
@@ -13,7 +13,7 @@ for filename in os.listdir('../'):
             numLines = len(lines)
             # print(numLines)
             more = False
-            checkLine = 6
+            checkLine = 5
             moreLine = 0
             # print(lines[checkLine])
 
@@ -28,6 +28,6 @@ for filename in os.listdir('../'):
                     moreLine = checkLine
                 else:
                     checkLine += 1
-            print('Answer:', lines[6:moreLine])
+            print('Answer:', lines[5:moreLine])
             print(' ')
             print(' ')
