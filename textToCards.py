@@ -56,7 +56,7 @@ def getAnswers(zettels, numZettels):
     for x in range(0, 8):
         answer = ''
         if zettels[x] != None:
-            answer = ''.join(zettels[x][1])
+            answer = ''.join(zettels[x][1]).replace('\n', '</p><p>')
         body += f'\t<div class="box"><p>{answer}</p></div>'
         if x != 7:
           body += '\n'
@@ -90,7 +90,6 @@ def dictionaryToHTML(zettels):
             flex-wrap: wrap;
           }
           p {
-            position: absolute;
             left: 0;
             right: 0;
             margin-top: 10px; 
